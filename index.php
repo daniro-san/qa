@@ -31,7 +31,7 @@
                 <input class="form-control form-control-lg" placeholder="Pergunta" type="text" name="question" id="questionToAnswer">
               </div>
               <div class="form-group">
-                <a class="btn btn-success btn-lg btn-block text-white" id="btn_gravar_audio">Gravar Pergunta</a>
+                <button class="btn btn-success btn-lg btn-block text-white" id="btn_gravar_audio">Gravar Pergunta</button>
                 <button class="btn btn-info btn-lg btn-block" id="btnAskQuestion">Perguntar</button>
               </div>
             </form>
@@ -139,6 +139,7 @@
         // Capturamos a ação do click no botão e iniciamos a gravação ou a paramos
         // dependendo da variavel de controle esta_gravando
         btn_gravacao.addEventListener('click', function(e){
+          e.preventDefault();
           // Verifico se esta gravando ou não
           if(esta_gravando){
             // Se estiver gravando mando parar a gravação
