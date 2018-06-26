@@ -54,6 +54,7 @@
         $('#answer').html('');
         $('#answerText').html('');
         let self = this;
+        $('#btn_gravar_audio').attr('disabled', true);
         e.preventDefault();
         let question = $('#questionToAnswer').val();
         $('#questionToAnswer').attr('disabled', true);
@@ -70,6 +71,7 @@
           $('#answerText').html(`<b>Contexto: </b><span>${json.answer[0].context.text}</span>`);
 
           self.disabled = false;
+          $('#btn_gravar_audio').attr('disabled', false);
           $('#questionToAnswer').attr('disabled', false);
           $('#questionToAnswer').attr('readonly', false);
         });
