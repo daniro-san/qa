@@ -60,7 +60,7 @@
         $('#questionToAnswer').attr('disabled', true);
         $('#questionToAnswer').attr('readonly', true);
 
-        let url = 'https://40.76.88.168:5000/answer?question='+question;
+        let url = 'https://40.76.88.50:5012/answer?question='+question;
 
         self.disabled = true;
 
